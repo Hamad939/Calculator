@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin-left: 75px;
+}
+
+.calculator {
+  text-align: center;
+  width: 300px; /* On desktop it won't stretch too wide */
+
+  max-height: 700px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+/*.buttons {
+  width: 100%;*/
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 8px;
+}
+
+button {
+  width: 100%;
+  height: 60px;
+
+  font-size: medium;
+  border-radius: 50px;
+  border: none;
+}
+button.operator {
+  background-color: rgba(173, 216, 230, 0.405);
+}
+#equal {
+  background-color: rgba(3, 3, 106, 0.763);
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(220, 220, 220);
+  border-radius: 0;
+}
+#display {
+  text-align: right;
+  margin-right: 40px;
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 0; /* remove default browser margin */
+    padding: 0;
+  }
+  h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .calculator {
+    position: fixed; /* stick to screen */
+    bottom: 0; /* align at bottom */
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 75%;
+  }
+  .buttons {
+    height: 70%;
+    position: fixed;
+    bottom: 0%;
+    padding: 0%;
+  }
+  #display {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5rem;
+    text-align: right;
+    margin-bottom: 15px;
+  }
+  .calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+
+    width: 100%;
+  }
+  .calculator .buttons button {
+    width: 100%;
+
+    height: 100%;
+
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+}
